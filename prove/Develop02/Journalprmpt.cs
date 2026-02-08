@@ -1,8 +1,6 @@
-using System;
-
-class Program
+class displayprompt
 {
-    static void Main(string[] args)
+    static void displlayprompt(string[] args)
     {
         Console.WriteLine("Hello Develop02 World!");
         Console.WriteLine("Tell me aboout your morning.");
@@ -13,3 +11,4 @@ class Program
 
     }
 }
+
