@@ -23,6 +23,7 @@ public class Journal
     {
         try
         {
+            //opens a file to write text to it
             using (StreamWriter writer = new StreamWriter(filename))
             {
         
@@ -30,10 +31,11 @@ public class Journal
 
         foreach (Entry entry in entries)
         {
+            //Write a line into the csv file that is the journal file
             writer.WriteLine(entry.ToCsv());
         }
 
-            
+            //Test if the file save was successful or not
             Console.WriteLine("Journal saved successfully!");
             Console.WriteLine("Saved to: " + Path.GetFullPath(filename));
             }
