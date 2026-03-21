@@ -23,19 +23,19 @@ public class Journal
     {
         try
         {
-            //opens a file to write text to it
+            //opens a file and writes text to the said file
             using (StreamWriter writer = new StreamWriter(filename))
             {
         
         writer.WriteLine("Date,Prompt,Response,Mood");
 
-        foreach (Entry entry in entries)
+        foreach (Entry JournalEntry in entries)
         {
-            //Write a line into the csv file that is the journal file
-            writer.WriteLine(entry.ToCsv());
+            //Write journal Entry into the csv file
+            writer.WriteLine(JournalEntry.ToCsv());
         }
 
-            //Test if the file save was successful or not
+            //Check if the save was successfull or not
             Console.WriteLine("Journal saved successfully!");
             Console.WriteLine("Saved to: " + Path.GetFullPath(filename));
             }
@@ -56,9 +56,9 @@ public class Journal
             foreach (string line in lines)
             {
                 string[] parts = line.Split(',');
-                Entry entry = new Entry(parts[1], parts[2], parts[3]);
+                Entry JournalEntry = new Entry(parts[1], parts[2], parts[3]);
                 entry.Date = parts[0];
-                entries.Add(entry);
+                entries.Add(JournalEntry);
             }
 
             

@@ -34,7 +34,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("Invalid choice.");
+            Console.WriteLine("Invalid choice, please try again.");
             return;
         }
 
