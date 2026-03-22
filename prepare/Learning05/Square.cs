@@ -1,11 +1,11 @@
-using System.Drawing;
-
+namespace Shape
+{
+    
 
 public class Square : Shape
 {
-    private static string color;
     private double _side;
-   public Square(string coor, double side) : base(color)
+   public Square(string color, double side) : base(color)
     {
         _side = side;
     }
@@ -13,4 +13,5 @@ public class Square : Shape
     {
         return _side * _side;
     }
+}
 }

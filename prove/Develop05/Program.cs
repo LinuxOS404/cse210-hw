@@ -13,6 +13,7 @@ static void Main(string[] args)
         Console.Write("Choose: ");
 
         string choice = Console.ReadLine();
+    }
 
 
 class EternalQuest

@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 
+
 public class DisplayPrompt
+
 {
     //Here are some of my prompts I made up for the Journal
     private List<string> prompts = new List<string>

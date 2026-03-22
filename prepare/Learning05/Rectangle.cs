@@ -1,15 +1,20 @@
-public class Rectangle : Shape
-{
- private double _length;
- private double _width;
 
- public Rectangle(string color,double length, double width) : base
+namespace Shape
 {
-     _length = length;
-     _width = width;   
-}
-    public override double GetArea()
+    public class Rectangle : Shape
     {
-        return _length * _width;
+        private double _length;
+        private double _width;
+
+        public Rectangle(string color, double length, double width) : base(color)
+        {
+            _length = length;
+            _width = width;
+        }
+
+        public override double GetArea()
+        {
+            return _length * _width;
+        }
     }
 }

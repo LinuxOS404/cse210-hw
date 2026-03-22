@@ -1,4 +1,7 @@
 [*.cs]
 
 # CA1050: Declare types in namespaces
-dotnet_diagnostic.CA1050.severity = error
+dotnet_diagnostic.CA1050.severity = warningng
+
+# Default severity for analyzer diagnostics with category 'Design'
+dotnet_analyzer_diagnostic.category-Design.severity = none

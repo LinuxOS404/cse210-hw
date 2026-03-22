@@ -13,9 +13,9 @@ public class Journal
 
     public void Display()
     {
-        foreach (Entry entry in entries)
+        foreach (Entry JournalEntry in entries)
         {
-            entry.Display();
+            JournalEntry.Display();
         }
     }
 
@@ -23,7 +23,7 @@ public class Journal
     {
         try
         {
-            //opens a file and writes text to the said file
+            //opens a file and writes text to the file
             using (StreamWriter writer = new StreamWriter(filename))
             {
         
@@ -57,7 +57,7 @@ public class Journal
             {
                 string[] parts = line.Split(',');
                 Entry JournalEntry = new Entry(parts[1], parts[2], parts[3]);
-                entry.Date = parts[0];
+                JournalEntry.Date = parts[0];
                 entries.Add(JournalEntry);
             }
 

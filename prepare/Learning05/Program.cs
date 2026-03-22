@@ -1,26 +1,38 @@
 using System;
+using System.Collections.Generic;
+using Shape;
 
 class Program
 {
     static void Main(string[] args)
     {
-        List<Shape> shapes = new List<Shape>();
+        List<Shape.Shape> shapes = new List<Shape.Shape>();
 
-        Square s1 = new Square(3, "red");
-        Rectangle r1 = new Rectangle(7, "yelllow");
-        Circle c1 = new Circle(6, "Blue");
-
+        Square s1 = new Square("red",3 );
+        
+        Rectangle s2 = new Rectangle("yellow",7,7);
+        
+        Circle s3 = new Circle("Blue",5);
 
         shapes.Add(s1);
-        shapes.Add(r1);
-        shapes.Add(c1);
+        shapes.Add(s2);
+        shapes.Add(s3);
 
-        foreach (Shape shape in shapes)
+
+        
+        
+       
+
+        foreach (Shape.Shape s in shapes)
         {
-            Console.WriteLine("Color: " + shape.GetColor());
-            Console.WriteLine("Area: " + shape.GetArea());
+            string color = s.GetColor();
+            double area = s.GetArea();
+            Console.WriteLine("Color: " + s.GetColor());
+            Console.WriteLine("Area: " + s.GetArea());
             
         }
 
+       
     }
 }
+

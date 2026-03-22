@@ -1,4 +1,7 @@
 using System;
+namespace Shape
+{
+    
 
 public class Circle : Shape
 {
@@ -11,6 +14,7 @@ public class Circle : Shape
 
     public override double GetArea()
     {
-        return Math.PI * _radius * _radius;
+        return  _radius * _radius * Math.PI;
     }
+}
 }
