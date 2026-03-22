@@ -5,3 +5,6 @@ dotnet_diagnostic.CA1050.severity = warningng
 
 # Default severity for analyzer diagnostics with category 'Design'
 dotnet_analyzer_diagnostic.category-Design.severity = none
+
+# IDE0210: Convert to top-level statements
+dotnet_diagnostic.IDE0210.severity = warning

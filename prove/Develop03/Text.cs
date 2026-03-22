@@ -1,18 +1,24 @@
 public class Text
 {
 
-public string Letters {get;}
-public bool IsBlank {get; private set;}
+public string Letters;
+//stores the state of the word
+public bool IsBlank;
 
 public Text(string text)
     {
-        Letters = Letters;
+        Letters = text;
         IsBlank = false;
     }
-
-    public void cover()
+//Method for hiding the word
+    public void Cover()
     {
         IsBlank = true;
+    }
+
+    public string GetText()
+    {
+        return Letters;
     }
     
     public void Display()
