@@ -19,7 +19,7 @@ public class DisplayPrompt
         "What did I do to help someone today"
 
     };
-//pull up random promps for writing
+//pull up random prompts from prompts list for writing
     private Random random = new Random();
 
     public string GetRandomPrompt()

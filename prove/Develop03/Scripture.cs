@@ -10,6 +10,7 @@ public class Scripture
 
   private int CurrentWordIndex = 0;
 
+//Spllits the scripture into specific words so it can then start blanking the words
   public Scripture(Verse verse, string letters)
     {
        Verse = verse;
@@ -21,7 +22,7 @@ public class Scripture
             _texts.Add(new Text(text));
         }
     }
-
+// This is to his random words and turn them into blanks
     public void HideRandom()
     {
         List<int> hiddenIndexes = new List<int>();
@@ -44,6 +45,7 @@ public class Scripture
         }
     }
         
+        //AllBlank is created so it can be used to find out when all of them our blank so a mssage can appear so users knows they completed the scripture,
         
         public bool AllBlank()
         {
@@ -57,7 +59,7 @@ public class Scripture
             return true;
         }
     
-
+//Shows the verse in a form the user can read so that the words can be blanked.
         public string ShowVerse()
         {
            List<string> wordStrings = new List<string>();

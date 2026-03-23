@@ -5,7 +5,7 @@ using System.Reflection.PortableExecutable;
 public class ScriptureList
 {
 
-
+//Verse list
 private List<Verse> verses = new List<Verse>();
 
 

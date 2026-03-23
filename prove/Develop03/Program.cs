@@ -5,18 +5,23 @@ class Program
 {
     
 static void Main(string[] args)
+
+// Gets Scripture Mastert from txt file I made.
     {
 string content = File.ReadAllText("ScriptureMastery.txt");
 string[] verseBlock = content.Split(new[] { "\n\n","\r\n\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
+//Gets random scripture from ScriptureMaster.txt
+
 Random random = new Random();
 
+//Creates a way for user to memorize another one.
 string playAgain = "y";
 
 do
 {
             
-        
+ //Code to split .txt file so each scripture has its own block and parses it correctly.        
 int randomIndex = random.Next(0, verseBlock.Length);
 string chosenBlock = verseBlock[randomIndex];
 
@@ -44,6 +49,7 @@ string[] parts = chosenBlock.Split('|');
                 return;
         scripture.HideRandom();
         }    
+        //clears the console
         Console.Clear();
         
         Console.WriteLine();

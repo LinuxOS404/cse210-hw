@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Verse
     {
-     
+    //Declares Book chapted start ect. 
    private string _book; 
    private int _chap; 
    private int _startV; 
@@ -31,12 +31,12 @@ _endV = endV;
         this.verse = verse;
         this.text = text;
     }
-
+//Seperates the words into a form where it can take 1 word at a time.
     public string GetScriptureSeperate()
     {
         return $"{_book} {_chap}:{_startV}";
     }
-    
+    //Replace the | and : with something that can help the program know that the book and chapter 
     public static Verse Parse(string s)
     {
     string Seperate = s.Replace('|',' ').Replace('-',' ').Replace(':',' ');

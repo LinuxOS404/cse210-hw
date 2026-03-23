@@ -15,12 +15,12 @@ public Text(string text)
     {
         IsBlank = true;
     }
-
+//Gets the word it will hide
     public string GetText()
     {
         return Letters;
     }
-    
+    //It will  display word if it's not blank
     public void Display()
     {
         IsBlank = false;

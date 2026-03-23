@@ -4,6 +4,7 @@ using System.IO;
 
 public class Journal
 {
+    //declare list
     public List<Entry> entries = new List<Entry>();
 
     public void AddEntry(Entry entry)
@@ -45,7 +46,7 @@ public class Journal
             Console.WriteLine("Error: Could not save the file.");
         }
     }
-
+//have journal.csv make sure it get pulled up successfully and pull up error if file is not able to be loaded
     public void Load(string filename)
     {
         try
