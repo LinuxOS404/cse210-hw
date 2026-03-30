@@ -8,3 +8,6 @@ dotnet_analyzer_diagnostic.category-Design.severity = none
 
 # IDE0210: Convert to top-level statements
 dotnet_diagnostic.IDE0210.severity = warning
+
+# IDE0055: Fix formatting
+dotnet_diagnostic.IDE0055.severity = silent

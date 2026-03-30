@@ -1,19 +1,67 @@
 using System;
+using System.Reflection.Metadata;
 
 // Listing activity
 public class ListingActivity : Activity
 {
-    public ListingActivity(string name, string description)
-        : base(name, description)
+    int countItems = 0;   
+  
+    private List<string> listItems = new List<string>
     {
+        "Hey there! How's your morning been?",
+        "What was the most important part of your day?",
+        "What was your favorite thing you ate today?",
+        "Did you drink enough water today?",
+        "What's something new you did today?",
+        "What was you favorite part of today",
+        "What made you laugh today?",
+        "What scripture stuck out to you in you study today?",
+        "What did I do to help someone today"
+
+    };
+
+    //pull up random prompts from prompts list for writing
+    private Random random = new Random();
+
+    public string GetRandomPrompt()
+    {
+        return listItems[random.Next(listItems.Count)];
     }
 
-    public override void Run()
+     public void StartListing()
     {
         Start();
+        PromptDuration();
 
-        Console.WriteLine("List things you are grateful for.");
+    string listItems = GetRandomPrompt();
+    Console.WriteLine();
+    Console.WriteLine("Use your duration to write as many answers to the following listitem:");
+    Console.WriteLine($"_____{listItems}_____");
+    Console.WriteLine("Starting in:");
+    StartCount();
+    
+    Console.WriteLine();
 
-        End();
+    DateTime startTime = getStartTime();
+    DateTime endTime = getEndTime(GetDuration());
+
+    while(DateTime.Now <= endTime) 
+    {
+        startTime = DateTime.Now;
+        Console.Write( ">");
+        Console.ReadLine();
+        countItems++;
+
+
     }
+
+    Console.Write($"You've written {countItems} responses ");
+
+    End();
+
+    Program program = new Program();
+    program.promptActivity();
+        
+    }
+    
 }
