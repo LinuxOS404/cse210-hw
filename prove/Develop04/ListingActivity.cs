@@ -27,7 +27,7 @@ public class ListingActivity : Activity
     {
         return listItems[random.Next(listItems.Count)];
     }
-
+//defning the startlisting method
      public void StartListing()
     {
         Start();
@@ -45,6 +45,7 @@ public class ListingActivity : Activity
     DateTime startTime = getStartTime();
     DateTime endTime = getEndTime(GetDuration());
 
+
     while(DateTime.Now <= endTime) 
     {
         startTime = DateTime.Now;
@@ -54,7 +55,7 @@ public class ListingActivity : Activity
 
 
     }
-
+//having the program count how many responses were given
     Console.Write($"You've written {countItems} responses ");
 
     End();

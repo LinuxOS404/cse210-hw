@@ -7,7 +7,7 @@ public class BreathingActivity : Activity
     {
     }
     
-
+//defining the startbreaths method
     public void StartBreaths()
     {
         Start();
@@ -18,7 +18,7 @@ public class BreathingActivity : Activity
         
         while(DateTime.Now <= endTime) 
         {
-        
+        //prompting user to breathe in and out with animations that shows animation that moves forward as the breaths are longer
         
         Console.WriteLine("...Breathe in...");
         _inhaleTime();
@@ -26,15 +26,16 @@ public class BreathingActivity : Activity
         _exhaleTime();
         
         startTime = DateTime.Now;
-       
-        End();
+        }
+        
         Program program = new Program();
         program.promptActivity();
         
         
-        }
+        
+        End();
        
-
+//defing when to inhale and exhale
   }    
      public void _inhaleTime()
     {

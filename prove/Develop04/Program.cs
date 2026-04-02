@@ -25,7 +25,7 @@ public class Program : Activity
         string choice = Console.ReadLine();
 
         Activity activity = null;
-
+//having user choose between activities and prompting system to start methos accroding to activity.
             if (choice == "1")
             {
             BreathingActivity breathingActivity  = new BreathingActivity();

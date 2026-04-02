@@ -4,6 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 // Base class for all activities
 public abstract class Activity
 {
+    //declaring variables
     protected string _name;
     protected string _description;
 
@@ -13,7 +14,7 @@ public abstract class Activity
     {
         
     }
-
+//finding the names and descriptions
     public void ReadName(string name)
     {
          _name = name;
@@ -23,7 +24,7 @@ public abstract class Activity
     {
             _description = description;
     }
-
+//finiding the duration and converting it to int
 public void PromptDuration()
     {
         Console.WriteLine();
@@ -41,16 +42,19 @@ public void PromptDuration()
     return _duration;
     }
        
-       
+   // defining the start method    
     public virtual void Start()
     {
     Console.WriteLine($"\nStarting{_name} Activity");
     Console.WriteLine(_description);
     }
+    //defining the end method
         public virtual void End()
     {
         Console.WriteLine($"\nYou have completed the{_name} Activity");
     }
+
+    //creating countdown
 
     public void StartCount()
     {
@@ -66,6 +70,8 @@ public void PromptDuration()
         
         Console.WriteLine("Done");
     }
+
+    //defining the run method
     public void Run()
     {
         Console.Clear();
@@ -74,7 +80,7 @@ public void PromptDuration()
     }
 
 
-
+//creating my countdown timer
 public void CountdownTimer()
     {
         
@@ -104,6 +110,8 @@ public void CountdownTimer()
     Console.WriteLine("Done");
     }
     }
+
+    //defining the datetime so program will go fo the amount of duration
     public DateTime getEndTime(int duration)
     {
     DateTime endTime = new DateTime();

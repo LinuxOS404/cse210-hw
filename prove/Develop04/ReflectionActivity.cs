@@ -5,6 +5,8 @@ public class ReflectionActivity : Activity
 {
     int countItems = 0;
 
+    //get first prompts for user to respond to
+
     private List<string> thinkingPrompts = new List<string>
     {
     "Think of a time where you felt relaxed",
@@ -24,7 +26,7 @@ public class ReflectionActivity : Activity
         return thinkingPrompts [random.Next(thinkingPrompts.Count)];
     }
     
-
+//get second deeper resonse
      private List<string> deeperPrompts = new List<string>
     {
     "Think of a time where you felt relaxed",
@@ -36,7 +38,7 @@ public class ReflectionActivity : Activity
     "Think of a time where you watched a good movie",
 
     };
-
+//having it pull up random prompts for the user.
     private Random random1 = new Random();
 
     public string GetRandomDeeperPrompt()
@@ -54,7 +56,7 @@ public class ReflectionActivity : Activity
 
     DateTime startTime = getStartTime();
     DateTime endTime = getEndTime(GetDuration());
-
+//sending first promprs and deeper prompts during the whole duration.
      while(DateTime.Now <= endTime)
      {
     startTime = DateTime.Now;
