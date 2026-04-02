@@ -29,13 +29,13 @@ public class ReflectionActivity : Activity
 //get second deeper resonse
      private List<string> deeperPrompts = new List<string>
     {
-    "Think of a time where you felt relaxed",
-    "Think of a time where you accomplished something difficult",
-    "Think of a time where you did a good deed without being rewarded or recognized",
-    "Think of a time you saw something beautiful",
-    "Think of a time where you are something truly delicious",
-       "Think of a time where you got to be with a person youo care about",
-    "Think of a time where you watched a good movie",
+    "How did you feel, and why",
+    "Would you plan on doing something like that again",
+    "How could it have been a better experience",
+    "How have you grown since then",
+    "What sense were used",
+    "What do you remember the most about that experience",
+    "Have you had experineces like that since then?",
 
     };
 //having it pull up random prompts for the user.
