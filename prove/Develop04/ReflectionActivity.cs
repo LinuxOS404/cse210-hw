@@ -35,7 +35,7 @@ public class ReflectionActivity : Activity
     "How have you grown since then",
     "What sense were used",
     "What do you remember the most about that experience",
-    "Have you had experineces like that since then?",
+    "Have you had experiences like that since then?",
 
     };
 //having it pull up random prompts for the user.

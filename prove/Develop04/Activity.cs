@@ -15,7 +15,7 @@ public abstract class Activity
         
     }
 //finding the names and descriptions
-    public void ReadName(string name)
+ public void ReadName(string name)
     {
          _name = name;
     }

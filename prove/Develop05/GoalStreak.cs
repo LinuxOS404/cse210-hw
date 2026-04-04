@@ -1,11 +1,19 @@
 using System;
+using System.Reflection.Metadata;
 using System.IO;
 
-public class GoalStreak
+public class GoalStreak : Goal
 {
     private int currentStreak = 0;
     private int longestStreak = 0;
     private DateTime lastStudyDate = DateTime.MinValue;
+
+public void DisplayGoalStreak()
+    {
+        
+    }
+
+
 
     public void recordStudy()
     {

@@ -1,7 +1,4 @@
 using System;
-using System.IO.Pipes;
-using System.Linq.Expressions;
-using System.Security.Cryptography;
 
 Console.WriteLine("Please input your percentage here to determine your grade");
 string prcent = Console.ReadLine();
