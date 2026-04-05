@@ -32,11 +32,6 @@ public void PromptDuration()
          _duration = Convert.ToInt32(Console.ReadLine());
     }
 
-
-    public void FindDuration(int duration)
-{
-    _duration = duration;
-}
     public int GetDuration()
     {
     return _duration;
