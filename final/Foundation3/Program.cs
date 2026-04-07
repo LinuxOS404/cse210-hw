@@ -9,17 +9,17 @@ public Program(string title, string description, DateTime date, TimeSpan time, A
     }
     static void Main(string[] args)
     {
-        Address addr1 = new Address("123 Main St", "Phoenix", "AZ", "85001");
+        Address addr1 = new Address("123 Main St", "Washington", "DC", "62324");
 
-        Address addr2 = new Address("55 Palm Way", "Miami", "FL", "33101");
+        Address addr2 = new Address("57 Kawaii way", "Tokyo", "Japan", "14235");
 
-        Address addr3 = new Address("890 Canyon Rd", "Denver", "CO", "80201");
+        Address addr3 = new Address("890 Barkington Rd", "Providence", "RH", "325234");
  
-        Lecture lecture = new Lecture("Space Exploration", "A deep dive into Mars missions", new DateTime(2025, 3, 20), new TimeSpan(18, 0, 0), addr1, "Dr. Hall", 150);
+        Lecture lecture = new Lecture("Moooo", "Cows and loving them", new DateTime(2025, 3, 20), new TimeSpan(16, 0, 0), addr1, "Dr. Moobert", 150);
 
-        Reception reception = new Reception("Networking Night", "Meet industry leaders", new DateTime(2025, 4, 5), new TimeSpan(19, 30, 0), addr2, "rsvp@events.com");
+        Reception reception = new Reception("Earth day", "Celebrate our planet", new DateTime(2025, 4, 5), new TimeSpan(15, 30, 0), addr2, "earth@events.com");
 
-        OutdoorGathering outdoor = new OutdoorGathering("Summer BBQ", "Fun outdoor barbecue for families", new DateTime(2025, 6, 18), new TimeSpan(12, 0, 0), addr3, "Sunny, 78°F");
+        OutdoorGathering outdoor = new OutdoorGathering("Sleep under the stars", "Campout under the sky", new DateTime(2025, 6, 18), new TimeSpan(12, 3, 4), addr3, "Foggy, 68°F");
         
         Console.WriteLine(lecture.GetMessages());
         Console.WriteLine();

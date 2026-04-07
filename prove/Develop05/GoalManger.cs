@@ -92,6 +92,11 @@ using System.IO;
                         goalList.Add(new Eternal(goalParts[1], int.Parse(goalParts[2]), goalParts[3], false));
                     }
                     else if (typeLabel == "ChecklistGoal")
+
+                    if (typeLabel == "Points")
+{
+    totalPoints = int.Parse(goalParts[1]); // This restores your score
+}
 {
     
     string name = goalParts[1];
@@ -137,6 +142,7 @@ public int GetTotalPoints()//Gets the whole amount of points a user has
 
 public void CreateGoal()//creates a goal aka the goal menu one #1 is selected.
 {
+    
     Console.WriteLine("\nThe types of Goals are:");
     Console.WriteLine("  1. Simple Goal");
     Console.WriteLine("  2. Eternal Goal");
@@ -167,7 +173,7 @@ public void CreateGoal()//creates a goal aka the goal menu one #1 is selected.
     }
 }
 
-public void ListGoalDetails()//Show what goals there are
+public void ListGoalDetails()//Shows what goals there are
 {
     Console.WriteLine("The goals are:");
 
@@ -189,23 +195,20 @@ public void ListGoalDetails()//Show what goals there are
 }
 
 
-public void RecordEvent()//calls RecordEvent method 
+public void RecordEvent()//calls RecordEvent method from the individual classes
 {
-    
     ListGoalDetails(); 
 
     Console.Write("Which goal did you accomplish? ");
     int goalIndex = int.Parse(Console.ReadLine()) - 1;
 
-    
+   
     int pointsEarned = goalList[goalIndex].RecordEvent();
 
-    
     totalPoints += pointsEarned;
 
     Console.WriteLine($"Congratulations! You earned {pointsEarned} points!");
     Console.WriteLine($"You now have {totalPoints} points.");
-}
-
+    }
     }
 

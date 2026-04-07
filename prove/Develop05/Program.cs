@@ -24,7 +24,7 @@ class Program
         Console.WriteLine("4. Load Goal");
         Console.WriteLine("5. Record Event");
 
-        Console.WriteLine("7. Quit");
+        Console.WriteLine("6. Quit");
 
 
         Console.Write("\nChoose: ");
