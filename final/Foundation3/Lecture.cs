@@ -1,17 +1,17 @@
 public class Lecture : Event
 {
-private string speaker;
- private int capacity;
+private string _speaker;
+ private int _capacity;
 
     public string LectureDetails()
     {
-     return $"{EventDetails()}: {speaker}: {capacity}";  
+     return $"{EventDetails()}: {_speaker}: {_capacity}";  
     }
 
     public Lecture(string title, string description, DateTime date, TimeSpan time, Address address, string speaker, int capacity): base(title,description,date,time,address)
     {
-     this.speaker = speaker;
-     this.capacity = capacity;
+     this._speaker = _speaker;
+     this._capacity = _capacity;
     }
     public string GetMessages()
     {
@@ -23,7 +23,7 @@ private string speaker;
     }
     public string GetDetails()
   {
-   return $"Event Type:Lecture\nTitle:{title}\nDate:{date}\nSpeaker:{speaker}\nCapacity:{capacity}"; 
+   return $"Event Type:Lecture\nTitle:{title}\nDate:{date}\nSpeaker:{_speaker}\nCapacity:{_capacity}"; 
   }
 
   public string GetShortDescription()

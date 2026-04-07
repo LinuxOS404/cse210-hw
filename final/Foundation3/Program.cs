@@ -23,9 +23,9 @@ public Program(string title, string description, DateTime date, TimeSpan time, A
         
         Console.WriteLine(lecture.GetMessages());
         Console.WriteLine();
-        Console.WriteLine(reception.GetDescription());
+        Console.WriteLine(reception.GetMessages());
         Console.WriteLine();
-        Console.WriteLine(outdoor.GetDescription());
+        Console.WriteLine(outdoor.GetMessages());
         Console.WriteLine();
     }
 }

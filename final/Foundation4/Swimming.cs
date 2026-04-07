@@ -1,16 +1,16 @@
 class Swimming : Activity
 {
 
-private int laps;
+private int _laps;
 
-public Swimming(DateTime date, int minutes,int laps) : base(date,minutes)
+public Swimming(DateOnly date, int minutes,int laps) : base(date,minutes)
     {
-      this.laps = laps;  
+      this._laps = laps;  
     }
 
    public override float GetSpeed()
     {
-      return GetDistance()/GetMinutes() * 60;  
+      return GetDistance() / GetMinutes() * 60;  
     }
 
     public override float GetPace()
@@ -20,7 +20,11 @@ public Swimming(DateTime date, int minutes,int laps) : base(date,minutes)
 
     public override float GetDistance()
     {
-      return laps * 50 / 1000 * 0.62f;  
+      return _laps * 50 / 1000 * 0.62f;  
+    }
+     public override string GetSummary()
+    {
+      return $"This is swimming - Date:{_date}|Minutes:{GetMinutes()}|Distance:{GetDistance()}|Speed:{GetSpeed()}|Pace:{GetPace()}";
     }
 }
 

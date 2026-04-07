@@ -11,19 +11,32 @@ private string rsvpEmail;
     {
      this.rsvpEmail = rsvpEmail;
     }
-public string GetDescription()
+    public string GetMessages()
     {
-      return $"Event Type: Reception\nTitle:{title}\nDate:{date}\nRSVP:{rsvpEmail} ";
+      return $"\n{GetDescription()}\n\n{GetDetails()}\n\n{GetShortDescription()}";
     }
+    public string GetDescription()
+    {
+      return $"Event Type:Reception\nTitle:{title}\nDate:{date}\n{time}\n{address}\n";
+    }
+    public string GetDetails()
+  {
+   return $"Event Type:Reception\nTitle:{title}\nDate:{date}\nrsvp:{rsvpEmail}"; 
+  }
 
-
-
-
-
-
-
-
-
-
-
+  public string GetShortDescription()
+  {
+   return $"Event Type:Reception\nTitle:{title}\nDate:{date}"; 
+  }
 }
+
+
+
+
+
+
+
+
+
+
+

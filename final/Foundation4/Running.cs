@@ -1,36 +1,31 @@
 class Running : Activity
 {
 
-private float distance;
+private float _distance;
 
-public Running(DateTime date, int minutes,float distance) : base(date,minutes)
+public Running(DateOnly date, int minutes,float distance) : base(date,minutes)
     {
-      this.distance = distance;  
+      this._distance = _distance;  
+
     }
+    
 
    public override float GetSpeed()
     {
-      return distance/GetMinutes() * 60;  
+      return _distance/GetMinutes() * 60;  
     }
 
     public override float GetPace()
     {
-      return GetMinutes()/distance;  
+      return GetMinutes()/_distance;  
     }
 
     public override float GetDistance()
     {
-      return distance;  
+      return _distance;  
     }
-
-
-
-
-
-
-
-
-
-
-
+    public override string GetSummary()
+    {
+      return $"This is running - Date:{_date}|Minutes:{GetMinutes()}|Distance:{GetDistance()}|Speed:{GetSpeed()}|Pace:{GetPace()}";
+    }
 }

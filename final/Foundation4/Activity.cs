@@ -1,13 +1,13 @@
 abstract class Activity
 {
 
-protected DateTime date;
-protected int miuntes;
+protected DateOnly _date;
+protected int _minutes;
 
-public Activity(DateTime date,int minutes)
+public Activity(DateOnly  date,int _minutes)
     {
-      this.date = date;
-      this.miuntes = minutes;  
+      this._date = date;
+      this._minutes = _minutes;  
     }
 
 public abstract float GetDistance();
@@ -21,8 +21,13 @@ public abstract float GetPace();
 
 public int GetMinutes()
     {
-     return miuntes;   
+     return _minutes;   
     }
+
+public DateOnly GetDate()
+  {
+   return _date; 
+  }
 
 public virtual string GetSummary()
     {
