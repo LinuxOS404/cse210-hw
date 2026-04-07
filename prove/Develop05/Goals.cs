@@ -1,52 +1,82 @@
+using System.ComponentModel;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 
-abstract class Goal
+public abstract class Goal
 {
     protected string _name;
   
     protected int _points;
 
+    protected string _description;
+
     protected bool _iscomplete;
 
-
-public Goal(string _name,int _points, bool _iscomplete)
-    {
-    }
     
-public void ReadName(string name)
+//constructors
+    public Goal(string name,int points,string description, bool iscomplete)
     {
-         _name = name;
-    }
-public void Promptpoints()
-    {
-    Console.WriteLine();
-    Console.WriteLine("Please enter the points the will be reward for completion of this goal: ");
-    _points = Convert.ToInt32(Console.ReadLine());
+   _name = name;
+    _points = points;
+    _iscomplete = iscomplete;
+    _description = description;
     }
 
-    public int points()
+    public bool GetIsComplete()// checkes whether something is completed 
+    {
+        return _iscomplete;
+    }
+
+    public void MarkComplete() //marks a goal as complete
+    {
+        _iscomplete = true;
+    }
+public string GetName()//get the name of the goal
+    {
+     return _name;   
+    }
+
+    public string GetDescription()//gets the description of the goal
+    {
+     return _description;   
+    }
+
+    public int GetPoints()//get the users points
     {
         return _points;
     }
       
-    public int RecordEvent(int points)
-    {
-     Goals = Console.ReadLine("What is your goal:");
-    return ;
-    }
-
-    public void DisplayGoal()
+    public abstract int RecordEvent();//calls the record event method
     
+
+    public virtual string DisplayGoal()//shows the name description and points of the goal
     {
-      return ;
+     if (_iscomplete)
+        {
+         return ($"[x]{_name}{_description}{_points}");   
+        }
+        else
+        {
+        return ($"[]{_name}{_description}{_points}");    
+        }
+    }
+    
+public virtual string GetGoalType()//show if it is a simple,eternal, or checklist goal
+    {
+        return $"{_name},{_description},{_iscomplete},{_points}";
     }
 
-public virtual int PointCaluculation()
-    {
-     return; 
-    }
-
+public virtual string GetDetailsString() //shows whether it was completed by using x
+{
+    
+    string status = GetIsComplete() ? "[X]" : "[ ]";
+    
+    
+    return $"{status} {GetName()} ({GetDescription()})";
 }
+}
+
+
 
 
 

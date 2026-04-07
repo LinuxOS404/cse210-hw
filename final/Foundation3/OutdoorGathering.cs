@@ -16,7 +16,7 @@ private string weather;
 
     public string GetDescription()
     {
-      return $"Event Type:OutdoorGathering\nTitle:{title}\nDate:{date} ";
+      return $"Event Type:OutdoorGathering\nTitle:{title}\nDate:{date} \nweather:{weather} ";
     }
 
 

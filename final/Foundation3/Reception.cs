@@ -13,7 +13,7 @@ private string rsvpEmail;
     }
 public string GetDescription()
     {
-      return $"Event Type:L Reception\nTitle:{title}\nDate:{date} ";
+      return $"Event Type: Reception\nTitle:{title}\nDate:{date}\nRSVP:{rsvpEmail} ";
     }
 
 

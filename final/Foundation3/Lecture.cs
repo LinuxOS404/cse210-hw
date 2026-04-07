@@ -13,26 +13,40 @@ private string speaker;
      this.speaker = speaker;
      this.capacity = capacity;
     }
-
+    public string GetMessages()
+    {
+      return $"\n{GetDescription()}\n\n{GetDetails()}\n\n{GetShortDescription()}";
+    }
     public string GetDescription()
     {
-      return $"Event Type:Lecture\nTitle:{title}\nDate:{date} ";
+      return $"Event Type:Lecture\nTitle:{title}\nDate:{date}\n{time}\n{address}\n";
     }
+    public string GetDetails()
+  {
+   return $"Event Type:Lecture\nTitle:{title}\nDate:{date}\nSpeaker:{speaker}\nCapacity:{capacity}"; 
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  public string GetShortDescription()
+  {
+   return $"Event Type:Lecture\nTitle:{title}\nDate:{date}"; 
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
